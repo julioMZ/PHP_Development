@@ -8,9 +8,9 @@
  * @author      Julio Mora <julio.mora.zamora@gmail.com>
  * @version     0.1
  */
-    class CacheManager_DB 
+    class CacheManager_Db
         extends CacheManager
-    {//---------------------------------------->> Class CacheManager_DB
+    {//---------------------------------------->> Class CacheManager_Db
         
         /**
          *
@@ -62,8 +62,8 @@
          *          </table>
          * @throws  CacheManager_Exception
          * @see     CacheManager::__construct()
-         * @see     CacheManager_DB::setPdoInstance()
-         * @see     CacheManager_DB::setTableName()
+         * @see     CacheManager_Db::setPdoInstance()
+         * @see     CacheManager_Db::setTableName()
          */
         public function __construct( array $config )
         {//-------------------->> __construct()
@@ -79,7 +79,7 @@
          * Get the internal PDO Instance. 
          * @return  PDO
          */
-        function getPdoInstance() 
+        public function getPdoInstance() 
         {//-------------------->> getPdoInstance()
             return $this->_pdoInstance;
         }//-------------------->> End getPdoInstance()
@@ -266,4 +266,4 @@
             
         }//-------------------->> End save()
 
-    }//---------------------------------------->> Class End CacheManager_DB
+    }//---------------------------------------->> Class End CacheManager_Db

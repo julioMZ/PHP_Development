@@ -17,13 +17,13 @@ abstract class CacheManager
      * @var     int $_expTime
      * @access  protected
      */
-    protected $_expTime = 60;
+    protected $_expTime = 0;
     
     /**
      * 
      * CacheManager constructor
      * @param   array $config Asociative array containing initial configuration.
-     *          <p>The mandatory configuration params will be:</p>
+     *          <p>The mandatory configuration param will be:</p>
      *          <table border="1">
      *              <tr>
      *                  <th>Key</th>

@@ -6,9 +6,10 @@
  * @author      Julio Mora <julio.mora.zamora@gmail.com>
  */
         
-     //---- CONFIG ----//
+     //---- GENERAL CONFIG ----//
         date_default_timezone_set( 'America/Mexico_City' );
-     //----------------//
+        error_reporting( 0 );
+     //------------------------//
 
      //---- DEFINE ----//
         define( 'BASE_PATH', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );   
@@ -55,7 +56,7 @@
             $action = ( isset( $_GET[ 'action' ] ) && !empty( $_GET[ 'action' ] ) ) ? strtolower( $_GET[ 'action' ] ) : 'file';
             $actionPath = ACTIONS_PATH . "{$action}Action.php";
             $viewPath = VIEWS_PATH . "{$action}View.php";
-
+            
             if( !file_exists( $actionPath ) ) {//---------->> if action doesn't exist
                 die( "No action {$action} found" );
             }//---------->> End if action doesn't exist

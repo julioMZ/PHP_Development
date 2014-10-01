@@ -13,11 +13,24 @@
             
     //---- DB CACHE SYSTEM CONFIG ----//
         $cacheConf = $config[ 'CacheConfig' ];
-        $cacheManager = new CacheManager_DB( array(
+        
+        /*
+        $cacheManager = new CacheManager_Db( array(
             'expTime' => $cacheConf[ 'expTime' ],
             'pdoInstance' => $db,
             'tableName' => $cacheConf[ 'db_table' ]
         ) );
+        */
+        
+        $cacheManager = CacheManager_Factory::getCacheManager( array(
+            'type' => 'DB',
+            'consArgs' => array( 
+                'expTime' => $cacheConf[ 'expTime' ],
+                'pdoInstance' => $db,
+                'tableName' => $cacheConf[ 'db_table' ] 
+            )
+        ) );
+        
     //---------------------------------//
     
     //---- INCLUDE TEST ----//
