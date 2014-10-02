@@ -1,0 +1,8 @@
+#AddDefaultCharset UTF-8
+
+#For Friendly URLs
+Options +FollowSymlinks
+RewriteEngine On
+#RewriteBase /Cache/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?action=$1
