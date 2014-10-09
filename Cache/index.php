@@ -57,6 +57,33 @@
             $actionPath = ACTIONS_PATH . "{$action}Action.php";
             $viewPath = VIEWS_PATH . "{$action}View.php";
             
+            //---- DB CONNECTION ----//
+            
+                $configDb = $config[ 'DataBase' ];
+                $db = new PDO( 
+                    "{$configDb[ 'dbms' ]}:host={$configDb[ 'host' ]};dbname={$configDb[ 'dbname' ]}", 
+                    $configDb[ 'user' ], 
+                    $configDb[ 'pass' ] 
+                );
+
+            //-----------------------//
+
+            //---- DB CACHE SYSTEM CONFIG ----//
+                $cacheConf = $config[ 'CacheConfig' ];
+                
+                CacheManager_File::setBaseRepositoryPath( $cacheConf[ 'file_sys_repo_path' ] );
+                
+                $cacheManager = CacheManager_Factory::getCacheManager( array(
+                    'type' => $action,
+                    'consArgs' => array( 
+                        'expTime' => $cacheConf[ 'expTime' ],
+                        'pdoInstance' => $db,
+                        'tableName' => $cacheConf[ 'db_table' ] 
+                    )
+                ) );
+
+            //---------------------------------//
+            
             if( !file_exists( $actionPath ) ) {//---------->> if action doesn't exist
                 die( "No action {$action} found" );
             }//---------->> End if action doesn't exist

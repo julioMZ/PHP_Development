@@ -90,7 +90,7 @@
          * retrived.
          * @return  string
          */
-        function getTableName()
+        public function getTableName()
         {//-------------------->> getTableName()
             return $this->_tableName;
         }//-------------------->> End getTableName()
@@ -100,7 +100,7 @@
          * PDO Dependency Inyection by setter method.
          * @param PDO $_pdoInstance
          */
-        function setPdoInstance( PDO $_pdoInstance ) 
+        public function setPdoInstance( PDO $_pdoInstance ) 
         {//-------------------->> setPdoInstance()
             $this->_pdoInstance = $_pdoInstance;
         }//-------------------->> End setPdoInstance()
@@ -114,7 +114,7 @@
          *          be saved and retrived.
          * @throws  CacheManager_Exception
          */
-        function setTableName( $tableName = '' ) 
+        public function setTableName( $tableName = '' ) 
         {//-------------------->> setTableName()
             
             $tableName = trim( $tableName );
