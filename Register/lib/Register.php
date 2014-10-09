@@ -194,4 +194,15 @@
             $this->_register = array();
         }//-------------------->> End clear()
         
+        /**
+         * 
+         * Private __clone function in order to deny the clonation action of the 
+         * internal Registry instance.
+         * @access  private
+         */
+        private function __clone() 
+        {//-------------------->> __clone() 
+            
+        }//-------------------->> End __clone()
+        
     }//---------------------------------------->> End Class Register
