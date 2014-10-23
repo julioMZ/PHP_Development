@@ -15,19 +15,15 @@
         View::setViewFilesRepository( VIEWS_PATH );
         
         $demoContent = new View( 'template.html' );
+        $demoContent->title = 'Demo Test';
+        $demoContent->setVar( 'content', View::getFileContent( VIEWS_PATH . 'content.html' ) );
         
-        $demoContent->setVars( array( 
-            'title' => 'Demo Test',
-            'content' => View::getFileContent( VIEWS_PATH . 'content.html' )
-        ) );
-        
-        $noCompress = $demoContent->render( false );
-        $compress = View::compressHTML( $noCompress );
+        $compress = View_Compressor::compressView( $demoContent, true );
         
         $demo = new View( 'demo.html' );
         
         $demo->setVars( array(
-            'noCompress' => htmlentities( $noCompress ),
+            'noCompress' => htmlentities( $demoContent ),
             'compress' => htmlentities( $compress )
         ) );
         

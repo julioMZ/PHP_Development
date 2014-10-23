@@ -1,17 +1,28 @@
 <?php
 
+    //---- REQUIRE DEPENDENCIES ----//
+    
+        if ( !defined( 'VIEW_PACKAGE_PATH' ) ) {
+            define( 'VIEW_PACKAGE_PATH', dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'View' . DIRECTORY_SEPARATOR );
+        }
+        
+        require_once VIEW_PACKAGE_PATH . 'Exception.php';
+        require_once VIEW_PACKAGE_PATH . 'Compressor.php';
+        
+    //------------------------------//
+
 /**
  * 
  * Class        View
  * Object to represent the View component from the MVC pattern.
  * @author      Julio Mora <julio.mora.zamora@gmail.com>
- * @version     2.5
+ * @version     2.7
  * @category    Views
  */    
     class View
     {//------------------------------------------------------------------>> Class View
         
-    	/**
+        /**
          * 
          * String Pattern to be searched in template definition as dynamic
          * content (placeholders).
@@ -77,7 +88,6 @@
          * View Object Constructor.
          * Tries to set the file to be used as template if the param $filePath is 
          * not empty.
-         * @access  public
          * @param   string $tempDef File path or string to be used as templete.
          * @param   boolean $fromFile Flag to define if the template will be set 
          *          since a file content or since the $tempDef param value. Boolean
@@ -100,7 +110,6 @@
          * An Exception will be thrown if the path is not a directory or if the
          * directory has not read permissions.
          * @static
-         * @access  public
          * @param   string $dirPath
          * @throws  Exception
          * @see     View::_throwViewException()
@@ -121,7 +130,6 @@
          * Tries to set a new Template Variable Definition Pattern to be match
          * in Dinamic Templates Definitions.
          * @static
-         * @access	public
          * @param	string $tempVarDef New Template Variable Definition Pattern.
          * @throws	Exception
          */
@@ -141,7 +149,7 @@
          * 
          * Method to ensure that the file expressed in $tempDef exist and/or set
          * the base object's properties to be used in template's variable substitution
-         * @access  public
+         * 
          * @param   string $tempDef Path where the file to use as templete is located or
          *          the string to use as template definition.
          * @param   boolean $fromFile Flag to define if the $tempDef represents a file path or
@@ -226,8 +234,7 @@
                         __CLASS__ . '::getFileContent() instead of using an instance.'  );
             	
             	}//-------------------->> End if is not a dynamic definition
-            	
-                $this->_viewFilePath = $filePath;
+
                 $this->_viewType = strtolower( substr( strrchr( $this->_viewFilePath, "." ), 1 ) );
                 $this->_prepareTemplateDefinition( $tempDef );
                 
@@ -265,8 +272,6 @@
         /**
          * 
          * Return the Original Template string.
-         * @access	public
-         * @param	void
          * @return	string	
          */
         public function getTemplate()
@@ -276,8 +281,29 @@
         
         /**
          * 
+         * Retrive the current view file path.
+         * @return  string
+         */
+        function getViewFilePath() 
+        {//---------------------------------------->> getViewFilePath()
+            return $this->_viewFilePath;
+        }//---------------------------------------->> End getViewFilePath()
+        
+        /**
+         * 
+         * Retrives the type of string used on this Views instance.
+         * If the template comes from an string, the returned value will be a 'sting'' value.
+         * @return  string
+         */
+        function getViewType() 
+        {//---------------------------------------->> getViewType()
+            return $this->_viewType;
+        }//---------------------------------------->> eND getViewType()
+
+            
+        /**
+         * 
          * Set the value of the variables to be remplaced on template's variables.
-         * @access  public
          * @param   array $vars Associative Array (pair->value) containing the
          *          value of the variables to be replaced on template's variables.
          * @return  View
@@ -296,13 +322,42 @@
             
         }//---------------------------------------->> End setVars()
         
+        /**
+         * 
+         * Set the value of one variable to be remplaced on the template.
+         * @param   string $name Name of the Variable
+         * @param   mixed $value Value of the Variable
+         */
+        public function setVar( $name, $value )
+        {//---------------------------------------->> setVar()
+            
+            settype( $value, 'string' );
+            
+            if ( empty( $name ) ) {//-------------------->> if empty var name
+                self::_throwViewException( 'A View var name is required' );
+            }//-------------------->> End if empty var name
+             
+            $this->_vars[ $name ] = $value;
+            
+        }//---------------------------------------->> End setVar()
+        
+        /**
+         * 
+         * Alias of the View::setVar() to allow its invocation from an instance
+         * like public property setter action.
+         * @param type $name
+         * @param type $value
+         */
+        public function __set($name, $value) 
+        {//---------------------------------------->> __set()
+            $this->setVar( $name, $value );
+        }//---------------------------------------->> End __set()
         
         /**
          * 
          * 
          * Make the var substitution according to the _vars property
          * content on _template property to get the new _view value.
-         * @access  public
          * @return  View
          * @see     View::_throwViewException()
          */
@@ -338,7 +393,6 @@
          * 
          * Return the _view property value.
          * If $render is a logic true, the value will be sent to the out buffer.
-         * @access  public
          * @param   boolean $render Flag to evaluate if the view property will be 
          *          send to the output buffer. Boolean false value by default.
          * @return  string
@@ -358,7 +412,6 @@
          * 
          * Make the vars substitution on template's format and get the 
          * resulting string.
-         * @access  public
          * @param   boolean $display Flag to define if the resulting _view
          *          will be sent to output buffer. Boolean true is the default
          *          value.
@@ -373,30 +426,10 @@
         
         /**
          * 
-         * Removes comentaries, tabs and return chars on (X)HTML strings.
-         * @static
-         * @access  public
-         * @param   string $buffer (X)HTML string to be compressed.
-         * @return  string
-         */
-        public static function compressHTML( $buffer = '' )
-        {//---------------------------------------->> compressHTML()
-            
-            $buffer = preg_replace( '!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer );
-            $buffer = preg_replace( '(<!-- (.*)-->)', '', $buffer );
-            $buffer = str_replace( array( "\r\n", "\r", "\n", "\t", '    ', '     ', '      '), '', $buffer );
-            
-            return $buffer;
-            
-        }//---------------------------------------->> End compressHTML()
-        
-        /**
-         * 
          * Obtains the file content as a string.
          * An exception will be thrown if the file path is not an existing file or
          * if the file has no read permissions.
          * @static
-         * @access  public
          * @param   $filePath Path where the file to be used as template is located.
          * @return  string
          * @see     self::_throwViewException()
@@ -426,11 +459,23 @@
          * @static
          * @access  private
          * @param   string $message
-         * @throws  Exception
+         * @throws  View_Exception
          */ 
         private static function _throwViewException( $message = '' ) 
         {//---------------------------------------->> _throwViewException()
-            throw new Exception( "View Exception: {$message}" );
+            throw new View_Exception( "View Exception: {$message}" );
         }//---------------------------------------->> End _throwViewException()
+        
+        /**
+         * 
+         * Executes View::render( false ) method and returns its result as
+         * string. 
+         * @return  string
+         * @see     View::render()
+         */
+        public function __toString() 
+        {//---------------------------------------->> __toString()
+            return $this->render( false );
+        }//---------------------------------------->> End __toString()
           
     }//------------------------------------------------------------------>> End Class View
