@@ -34,7 +34,7 @@ class BusFlee
         
         foreach ( $busCollection as $index => $bus ) {//---------->> foreach $bus
             
-            if ( !$bus instanceof Bus ) {//---------->> if $bus is not a Bus object
+            if ( !$bus instanceof Runner ) {//---------->> if $bus is not a Bus object
                 throw new InvalidArgumentException( "The {$index} index is not a Bus instance" );
             }//---------->> End if $bus is not a Bus object
             
@@ -51,11 +51,13 @@ class BusFlee
     public function run()
     {//-------------------->> go()
         
-        echo "The Bus Flee is running!\n";
+        $result = array( "The Bus Flee is running!" );
         
         foreach ( $this->_buses as $bus ) {//---------->> foreach $bus
-            $bus->run();
+            $result[] = $bus->run();
         }//---------->> End foreach $bus
+        
+        return implode( "\n", $result );
         
     }//-------------------->> End go()
     

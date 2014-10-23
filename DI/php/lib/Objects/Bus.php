@@ -56,7 +56,7 @@ class Bus
      */
     public function run()
     {//-------------------->> run()
-        echo "The Operator has turned on the Bus, introduces him/her self saying: \"{$this->_operator->introduce()}\" and the Bus is running!\n";
+        return "The Operator has turned on the Bus, introduces him/her self saying: \"{$this->_operator->introduce()}\" and the Bus is running!";
     }//-------------------->> End run()
     
 }//---------------------------------------->> End Class Bus
