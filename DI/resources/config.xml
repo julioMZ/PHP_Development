@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DI_Config SYSTEM "DI_Config.dtd">
+<DI_Config>
+
+    <paths>
+
+        <path type="contextPath" value="C:\\xampp\htdocs\projects\PHP_Development\DI\" />
+        <path type="package" id="OBJECTS" value="php\lib\Objects\" />
+        
+    </paths>
+
+    <objects>
+        
+        <object id="Julio" classPath="Person.php" scope="Request" >
+            
+            <constArgs>
+                <constArg value="Julio" />
+                <constArg value="Mora" />
+            </constArgs>
+
+            <setProperties>
+                <setProperty name="age" value="30" type="int" />
+            </setProperties>
+
+        </object>
+
+        <object id="Miguel" classPath="Person.php" scope="Request" >
+
+            <setProperties>
+                <setProperty name="name" value="Miguel" />
+                <setProperty name="lastName" value="González" />
+                <setProperty name="age" value="36" type="int" />
+            </setProperties>
+            
+        </object>
+
+        <object id="Bus1" classPath="Bus.php" scope="Request" >
+
+            <constArgs>
+                <constArg ref="Miguel" />
+            </constArgs>
+
+        </object>
+        
+        <object id="Bus2" classPath="Bus.php" scope="Request" >
+
+            <constArgs>
+                <constArg ref="Julio" />
+            </constArgs>
+
+        </object>
+        
+        <object id="BusFlee" classPath="BusFlee.php" scope="Request" >
+
+            <constArgs>
+                <constArg type="cdata-json">
+                    <![CDATA[[{"ref":"Bus1"},{"ref":"Bus2"}]]]>
+                </constArg>
+            </constArgs>
+
+        </object>
+
+    </objects>
+
+</DI_Config>

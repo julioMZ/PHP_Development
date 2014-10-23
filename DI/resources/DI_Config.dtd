@@ -1,0 +1,39 @@
+<!ENTITY % pathType
+"type   (contextPath|package)                       #REQUIRED"
+>
+<!ENTITY % propertyType
+"type   (bool|cdata-json|float|int|null|string)     #IMPLIED"
+>
+<!ENTITY % propBaseAttr 
+"%propertyType;
+ref     CDATA                                       #IMPLIED
+value   CDATA                                       #IMPLIED"
+>
+<!ELEMENT DI_Config (paths,objects)>
+    <!ELEMENT paths (path+)>
+        <!ELEMENT path EMPTY>
+            <!ATTLIST path 
+                %pathType;
+                id          ID                                  #IMPLIED
+                value       CDATA                               #REQUIRED
+            >
+    <!ELEMENT objects (object*)>
+        <!ELEMENT object (constArgs?,setProperties?)>
+            <!ATTLIST object 
+                id          ID                                  #REQUIRED
+                classPath   CDATA                               #REQUIRED
+                className   CDATA                               #IMPLIED
+                scope       (Request|Session|App|Application)   "Request"
+            >
+            <!ELEMENT constArgs (constArg+)>
+                <!ELEMENT constArg (#PCDATA)>
+                    <!ATTLIST constArg
+                        %propBaseAttr;
+                    >
+            <!ELEMENT setProperties (setProperty+)>
+                <!ELEMENT setProperty (#PCDATA)>
+                    <!ATTLIST setProperty
+                        %propBaseAttr;
+                        name        CDATA                       #REQUIRED
+                    >
+            
