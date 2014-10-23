@@ -53,7 +53,7 @@
         public static function getInstance()
         {//-------------------->> getInstance()
 
-            if( is_null( self::$_instance ) ) {//---------->> if empty instance
+            if ( is_null( self::$_instance ) ) {//---------->> if empty instance
                 self::$_instance = new self();
             }//---------->> End if empty instance
 
