@@ -46,7 +46,6 @@ class BusFlee
     
     /**
      * 
-     * Decorator Design Pattern Implementation.
      * Puts every Bus on the Flee to run.
      */
     public function run()
