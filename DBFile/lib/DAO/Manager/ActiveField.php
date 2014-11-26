@@ -2,7 +2,7 @@
 
 /**
  *
- * DAO with the logic for erasing registers via active field.
+ * DAO with the logic for activate/deactivate registers via active field.
  * @package     DAO
  * @subpackage  Manager
  * @author      Julio Mora <julio.mora.zamora@gmail.com>
@@ -101,7 +101,7 @@ class DAO_Manager_ActiveField
     
     /**
      * 
-     * Performs an UPDATE action setting the active field into 0.
+     * Performs an UPDATE action setting the active field to 0.
      * @param   int $id ID of the record to be updated into an innactive state.
      * @return  boolean
      */
