@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="">
+  <file path="Interface/Number.php" hash="a3712014e660b8b64d581ebcfbd1c1b3" package="Default">
+    <class final="true" abstract="true" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Object</extends>
+      <name>Data_Interface_Number</name>
+      <full_name>\Data_Interface_Number</full_name>
+      <property final="false" static="false" visibility="private" line="7" namespace="global" package="Default">
+        <name>$_negative</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="9" package="Default">
+        <name>_setNegative</name>
+        <full_name>_setNegative</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="18" package="Default">
+        <name>isNegative</name>
+        <full_name>isNegative</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+        <name>toString</name>
+        <full_name>toString</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="Default">
+        <name>isEmpty</name>
+        <full_name>isEmpty</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="Default">
+        <name>isNaN</name>
+        <full_name>isNaN</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="38" package="Default">
+        <name>intValue</name>
+        <full_name>intValue</full_name>
+        <argument line="38">
+          <name>$base</name>
+          <default><![CDATA[10]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="Default">
+        <name>floatValue</name>
+        <full_name>floatValue</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Interface/Number.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Interface_Number</error>
+      <error line="7" code="50018">No DocBlock was found for property $_negative</error>
+      <error line="9" code="50010">No DocBlock was found for method _setNegative()</error>
+      <error line="18" code="50010">No DocBlock was found for method isNegative()</error>
+      <error line="23" code="50010">No DocBlock was found for method toString()</error>
+      <error line="28" code="50010">No DocBlock was found for method isEmpty()</error>
+      <error line="33" code="50010">No DocBlock was found for method isNaN()</error>
+      <error line="38" code="50010">No DocBlock was found for method intValue()</error>
+      <error line="43" code="50010">No DocBlock was found for method floatValue()</error>
+    </parse_markers>
+  </file>
+  <file path="Interface/Countable.php" hash="c2672235b78c7326532d065c6b9ea8fd" package="Default">
+    <interface namespace="global" line="3" package="Default">
+      <name>Data_Interface_Countable</name>
+      <full_name>\Data_Interface_Countable</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>length</name>
+        <full_name>length</full_name>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Interface/Countable.php</error>
+      <error line="5" code="50010">No DocBlock was found for method length()</error>
+    </parse_markers>
+  </file>
+  <file path="Interface/Comparable.php" hash="caba757a07a93f0fd72205b4fce06a39" package="Default">
+    <interface namespace="global" line="3" package="Default">
+      <name>Data_Interface_Comparable</name>
+      <full_name>\Data_Interface_Comparable</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>equals</name>
+        <full_name>equals</full_name>
+        <argument line="5">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="6" package="Default">
+        <name>contentEquals</name>
+        <full_name>contentEquals</full_name>
+        <argument line="6">
+          <name>$content</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Interface/Comparable.php</error>
+      <error line="5" code="50010">No DocBlock was found for method equals()</error>
+      <error line="6" code="50010">No DocBlock was found for method contentEquals()</error>
+    </parse_markers>
+  </file>
+  <file path="Interface/Collection.php" hash="7b4f328b586d165170210dc3b31e9da7" package="Default">
+    <class final="true" abstract="true" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Object</extends>
+      <implements>\IteratorAggregate</implements>
+      <implements>\ArrayAccess</implements>
+      <implements>\Countable</implements>
+      <name>Data_Interface_Collection</name>
+      <full_name>\Data_Interface_Collection</full_name>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="global" line="8" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="8">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="global" line="13" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="13">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="13">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="global" line="14" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="14">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="16" package="Default">
+        <name>count</name>
+        <full_name>count</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="Default">
+        <name>offsetExists</name>
+        <full_name>offsetExists</full_name>
+        <argument line="21">
+          <name>$offset</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="26" package="Default">
+        <name>offsetGet</name>
+        <full_name>offsetGet</full_name>
+        <argument line="26">
+          <name>$offset</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="31" package="Default">
+        <name>offsetSet</name>
+        <full_name>offsetSet</full_name>
+        <argument line="31">
+          <name>$offset</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="31">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>offsetUnset</name>
+        <full_name>offsetUnset</full_name>
+        <argument line="36">
+          <name>$offset</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="Default">
+        <name>clear</name>
+        <full_name>clear</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="46" package="Default">
+        <name>getKeys</name>
+        <full_name>getKeys</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="51" package="Default">
+        <name>getIterator</name>
+        <full_name>getIterator</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="56" package="Default">
+        <name>isEmpty</name>
+        <full_name>isEmpty</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="61" package="Default">
+        <name>toString</name>
+        <full_name>toString</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Interface/Collection.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Interface_Collection</error>
+      <error line="8" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="13" code="50010">No DocBlock was found for method add()</error>
+      <error line="14" code="50010">No DocBlock was found for method remove()</error>
+      <error line="16" code="50010">No DocBlock was found for method count()</error>
+      <error line="21" code="50010">No DocBlock was found for method offsetExists()</error>
+      <error line="26" code="50010">No DocBlock was found for method offsetGet()</error>
+      <error line="31" code="50010">No DocBlock was found for method offsetSet()</error>
+      <error line="36" code="50010">No DocBlock was found for method offsetUnset()</error>
+      <error line="41" code="50010">No DocBlock was found for method clear()</error>
+      <error line="46" code="50010">No DocBlock was found for method getKeys()</error>
+      <error line="51" code="50010">No DocBlock was found for method getIterator()</error>
+      <error line="56" code="50010">No DocBlock was found for method isEmpty()</error>
+      <error line="61" code="50010">No DocBlock was found for method toString()</error>
+    </parse_markers>
+  </file>
+  <file path="Interface/Object.php" hash="1e3349d4f16e7104ec774b842357dad1" package="Default">
+    <class final="true" abstract="true" namespace="global" line="3" package="Default">
+      <extends/>
+      <implements>\Data_Interface_Comparable</implements>
+      <implements>\Serializable</implements>
+      <name>Data_Interface_Object</name>
+      <full_name>\Data_Interface_Object</full_name>
+      <property final="false" static="false" visibility="protected" line="7" namespace="global" package="Default">
+        <name>$_var</name>
+        <default><![CDATA[null]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="9" package="Default">
+        <name>getVar</name>
+        <full_name>getVar</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="Default">
+        <name>getClass</name>
+        <full_name>getClass</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="19" package="Default">
+        <name>getClasses</name>
+        <full_name>getClasses</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="Default">
+        <name>equals</name>
+        <full_name>equals</full_name>
+        <argument line="24">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="29" package="Default">
+        <name>contentEquals</name>
+        <full_name>contentEquals</full_name>
+        <argument line="29">
+          <name>$content</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="34" package="Default">
+        <name>getInterfaces</name>
+        <full_name>getInterfaces</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="Default">
+        <name>getProperties</name>
+        <full_name>getProperties</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="44" package="Default">
+        <name>getMethods</name>
+        <full_name>getMethods</full_name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="49" package="Default">
+        <name>_throwTypeException</name>
+        <full_name>_throwTypeException</full_name>
+        <argument line="49">
+          <name>$message</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="54" package="Default">
+        <name>serialize</name>
+        <full_name>serialize</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="59" package="Default">
+        <name>unserialize</name>
+        <full_name>unserialize</full_name>
+        <argument line="59">
+          <name>$data</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="64" package="Default">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="global" line="69" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="69">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="global" line="70" package="Default">
+        <name>toString</name>
+        <full_name>toString</full_name>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="global" line="71" package="Default">
+        <name>isEmpty</name>
+        <full_name>isEmpty</full_name>
+      </method>
+      <method final="false" abstract="true" static="true" visibility="public" namespace="global" line="72" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="72">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Interface/Object.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Interface_Object</error>
+      <error line="7" code="50018">No DocBlock was found for property $_var</error>
+      <error line="9" code="50010">No DocBlock was found for method getVar()</error>
+      <error line="14" code="50010">No DocBlock was found for method getClass()</error>
+      <error line="19" code="50010">No DocBlock was found for method getClasses()</error>
+      <error line="24" code="50010">No DocBlock was found for method equals()</error>
+      <error line="29" code="50010">No DocBlock was found for method contentEquals()</error>
+      <error line="34" code="50010">No DocBlock was found for method getInterfaces()</error>
+      <error line="39" code="50010">No DocBlock was found for method getProperties()</error>
+      <error line="44" code="50010">No DocBlock was found for method getMethods()</error>
+      <error line="49" code="50010">No DocBlock was found for method _throwTypeException()</error>
+      <error line="54" code="50010">No DocBlock was found for method serialize()</error>
+      <error line="59" code="50010">No DocBlock was found for method unserialize()</error>
+      <error line="64" code="50010">No DocBlock was found for method __toString()</error>
+      <error line="69" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="70" code="50010">No DocBlock was found for method toString()</error>
+      <error line="71" code="50010">No DocBlock was found for method isEmpty()</error>
+      <error line="72" code="50010">No DocBlock was found for method valueOf()</error>
+    </parse_markers>
+  </file>
+  <file path="Exception/Type.php" hash="9d0813712e51d1be4976a7898a33e168" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Exception</extends>
+      <name>Data_Exception_Type</name>
+      <full_name>\Data_Exception_Type</full_name>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Exception/Type.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Exception_Type</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Float.php" hash="4c957ddc1a64089cfda736c3c1ee73d9" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Number</extends>
+      <name>Data_Type_Float</name>
+      <full_name>\Data_Type_Float</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="7">
+          <name>$var</name>
+          <default><![CDATA[0.0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="12">
+          <name>$var</name>
+          <default><![CDATA[0.0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="22" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="22">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="27" package="Default">
+        <name>parseFloat</name>
+        <full_name>parseFloat</full_name>
+        <argument line="27">
+          <name>$value</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Float.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Float</error>
+      <error line="7" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="12" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="22" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="27" code="50010">No DocBlock was found for method parseFloat()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Boolean.php" hash="f9fddceb6fa2c55fc43a5c0d1c69a753" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Object</extends>
+      <name>Data_Type_Boolean</name>
+      <full_name>\Data_Type_Boolean</full_name>
+      <property final="false" static="false" visibility="protected" line="7" namespace="global" package="Default">
+        <name>$_booleanValue</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <property final="false" static="true" visibility="public" line="9" namespace="global" package="Default">
+        <name>$trueValues</name>
+        <default><![CDATA[array('1', '1.0', 'true', 'yes')]]></default>
+      </property>
+      <property final="false" static="true" visibility="public" line="10" namespace="global" package="Default">
+        <name>$falseValues</name>
+        <default><![CDATA[array('0', '0.0', 'false', 'no')]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="12">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="17">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+        <name>booleanValue</name>
+        <full_name>booleanValue</full_name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="28" package="Default">
+        <name>parseBoolean</name>
+        <full_name>parseBoolean</full_name>
+        <argument line="28">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="Default">
+        <name>toString</name>
+        <full_name>toString</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="72" package="Default">
+        <name>isEmpty</name>
+        <full_name>isEmpty</full_name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="77" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="77">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Boolean.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Boolean</error>
+      <error line="7" code="50018">No DocBlock was found for property $_booleanValue</error>
+      <error line="9" code="50018">No DocBlock was found for property $trueValues</error>
+      <error line="10" code="50018">No DocBlock was found for property $falseValues</error>
+      <error line="12" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="17" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="23" code="50010">No DocBlock was found for method booleanValue()</error>
+      <error line="28" code="50010">No DocBlock was found for method parseBoolean()</error>
+      <error line="67" code="50010">No DocBlock was found for method toString()</error>
+      <error line="72" code="50010">No DocBlock was found for method isEmpty()</error>
+      <error line="77" code="50010">No DocBlock was found for method valueOf()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Collection/Booleans.php" hash="b0ac712684f5ef6c8aea3df469790f8e" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Collection_Booleans</name>
+      <full_name>\Data_Type_Collection_Booleans</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="7">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="31" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="31">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="36">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="36">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="49">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Collection/Booleans.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Collection_Booleans</error>
+      <error line="7" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="31" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="36" code="50010">No DocBlock was found for method add()</error>
+      <error line="49" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Collection/Types.php" hash="31d976141bc446b1faf609ac8d2352cd" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Collection_Types</name>
+      <full_name>\Data_Type_Collection_Types</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="8" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="8">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="33" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="33">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="38" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="38">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="38">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="51" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="51">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Collection/Types.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Collection_Types</error>
+      <error line="8" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="33" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="38" code="50010">No DocBlock was found for method add()</error>
+      <error line="51" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Collection/Integers.php" hash="8bd21867e63ad40bbbe77616dc3db3ea" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Collection_Integers</name>
+      <full_name>\Data_Type_Collection_Integers</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="8" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="8">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="32" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="32">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="37" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="37">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="37">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="50" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="50">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Collection/Integers.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Collection_Integers</error>
+      <error line="8" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="32" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="37" code="50010">No DocBlock was found for method add()</error>
+      <error line="50" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Collection/Arrays.php" hash="9cf8f4a88b562ff2e96db63df9d906c4" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Collection_Arrays</name>
+      <full_name>\Data_Type_Collection_Arrays</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="7">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="32" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="32">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="37" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="37">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="37">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="50" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="50">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Collection/Arrays.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Collection_Arrays</error>
+      <error line="7" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="32" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="37" code="50010">No DocBlock was found for method add()</error>
+      <error line="50" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Collection/Floats.php" hash="bda0876a368e42486edfb739b347e274" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Collection_Floats</name>
+      <full_name>\Data_Type_Collection_Floats</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="7">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="31" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="31">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="36">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="36">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="49">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Collection/Floats.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Collection_Floats</error>
+      <error line="7" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="31" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="36" code="50010">No DocBlock was found for method add()</error>
+      <error line="49" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Collection/Strings.php" hash="6d3e7e1a858b46c3e99eda1fbe3d6c51" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Collection_Strings</name>
+      <full_name>\Data_Type_Collection_Strings</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="7">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="31" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="31">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="36">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="36">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="49">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Collection/Strings.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Collection_Strings</error>
+      <error line="7" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="31" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="36" code="50010">No DocBlock was found for method add()</error>
+      <error line="49" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Integer.php" hash="439c5c322db84e9c6ccc7654375b65c3" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Number</extends>
+      <name>Data_Type_Integer</name>
+      <full_name>\Data_Type_Integer</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="7">
+          <name>$var</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$base</name>
+          <default><![CDATA[10]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="12">
+          <name>$var</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="12">
+          <name>$base</name>
+          <default><![CDATA[10]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="24" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="24">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="29" package="Default">
+        <name>parseInt</name>
+        <full_name>parseInt</full_name>
+        <argument line="29">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+        <argument line="29">
+          <name>$base</name>
+          <default><![CDATA[10]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="Default">
+        <name>toBinaryString</name>
+        <full_name>toBinaryString</full_name>
+        <docblock line="34">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="access" description="public"/>
+          <tag line="34" name="desc" description="Convert the integer into binary format."/>
+          <tag line="34" name="return" description="Integer value in binary format." type="String">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="Default">
+        <name>toHexString</name>
+        <full_name>toHexString</full_name>
+        <docblock line="44">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="44" name="access" description="public"/>
+          <tag line="44" name="desc" description="Convert the integer into hex format."/>
+          <tag line="44" name="return" description="Integer value in hex format." type="String">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="59" package="Default">
+        <name>toOctalString</name>
+        <full_name>toOctalString</full_name>
+        <docblock line="54">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="54" name="access" description="public"/>
+          <tag line="54" name="desc" description="Convert the integer into octal format."/>
+          <tag line="54" name="return" description="Integer value in octal format." type="String">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="69" package="Default">
+        <name>toDecimalString</name>
+        <full_name>toDecimalString</full_name>
+        <docblock line="64">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="64" name="access" description="public"/>
+          <tag line="64" name="desc" description="Convert the integer into decimal format."/>
+          <tag line="64" name="return" description="Integer value in decimal format." type="String">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Integer.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_Integer</error>
+      <error line="7" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="12" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="24" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="29" code="50010">No DocBlock was found for method parseInt()</error>
+      <error line="34" code="50012">No short description for method toBinaryString()</error>
+      <error line="44" code="50012">No short description for method toHexString()</error>
+      <error line="54" code="50012">No short description for method toOctalString()</error>
+      <error line="64" code="50012">No short description for method toDecimalString()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/Array.php" hash="b615af422f8658fe8c708d5b95e540f6" package="Default">
+    <class final="false" abstract="false" namespace="global" line="4" package="Default">
+      <extends>\Data_Interface_Collection</extends>
+      <name>Data_Type_Array</name>
+      <full_name>\Data_Type_Array</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="8" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="8">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="13" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="13">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="18" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <argument line="18">
+          <name>$item</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="18">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="Default">
+        <name>remove</name>
+        <full_name>remove</full_name>
+        <argument line="24">
+          <name>$index</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/Array.php</error>
+      <error line="4" code="50000">No DocBlock was found for \Data_Type_Array</error>
+      <error line="8" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="13" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="18" code="50010">No DocBlock was found for method add()</error>
+      <error line="24" code="50010">No DocBlock was found for method remove()</error>
+    </parse_markers>
+  </file>
+  <file path="Type/String.php" hash="52857b8b93f3cdbe1e571c4c4b370d74" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Data_Interface_Object</extends>
+      <implements>\Data_Interface_Countable</implements>
+      <name>Data_Type_String</name>
+      <full_name>\Data_Type_String</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="8" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="8">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="13" package="Default">
+        <name>setVar</name>
+        <full_name>setVar</full_name>
+        <argument line="13">
+          <name>$var</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="Default">
+        <name>equalsIgnoreCase</name>
+        <full_name>equalsIgnoreCase</full_name>
+        <argument line="21">
+          <name>$content</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="26" package="Default">
+        <name>startsWith</name>
+        <full_name>startsWith</full_name>
+        <argument line="26">
+          <name>$charSecuence</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="31" package="Default">
+        <name>endsWith</name>
+        <full_name>endsWith</full_name>
+        <argument line="31">
+          <name>$charSecuence</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="37" package="Default">
+        <name>indexOf</name>
+        <full_name>indexOf</full_name>
+        <argument line="37">
+          <name>$charSecuence</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="42" package="Default">
+        <name>lastIndexOf</name>
+        <full_name>lastIndexOf</full_name>
+        <argument line="42">
+          <name>$charSecuence</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="47" package="Default">
+        <name>subString</name>
+        <full_name>subString</full_name>
+        <argument line="47">
+          <name>$start</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="47">
+          <name>$end</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="52" package="Default">
+        <name>concat</name>
+        <full_name>concat</full_name>
+        <argument line="52">
+          <name>$charSecuence</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="Default">
+        <name>replace</name>
+        <full_name>replace</full_name>
+        <argument line="57">
+          <name>$search</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$replace</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="Default">
+        <name>matches</name>
+        <full_name>matches</full_name>
+        <argument line="62">
+          <name>$pattern</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="Default">
+        <name>replaceFirst</name>
+        <full_name>replaceFirst</full_name>
+        <argument line="68">
+          <name>$pattern</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="68">
+          <name>$replace</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="73" package="Default">
+        <name>replaceAll</name>
+        <full_name>replaceAll</full_name>
+        <argument line="73">
+          <name>$pattern</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="73">
+          <name>$replace</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="78" package="Default">
+        <name>split</name>
+        <full_name>split</full_name>
+        <argument line="78">
+          <name>$delimeter</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="83" package="Default">
+        <name>toLowerCase</name>
+        <full_name>toLowerCase</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="88" package="Default">
+        <name>toUpperCase</name>
+        <full_name>toUpperCase</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="93" package="Default">
+        <name>length</name>
+        <full_name>length</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="98" package="Default">
+        <name>realLength</name>
+        <full_name>realLength</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="103" package="Default">
+        <name>trim</name>
+        <full_name>trim</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="108" package="Default">
+        <name>isEmpty</name>
+        <full_name>isEmpty</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="113" package="Default">
+        <name>toString</name>
+        <full_name>toString</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="118" package="Default">
+        <name>toCharArray</name>
+        <full_name>toCharArray</full_name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="123" package="Default">
+        <name>valueOf</name>
+        <full_name>valueOf</full_name>
+        <argument line="123">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type>\Data_Interface_Object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="128" package="Default">
+        <name>stringValue</name>
+        <full_name>stringValue</full_name>
+        <argument line="128">
+          <name>$var</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Type/String.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Data_Type_String</error>
+      <error line="8" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="13" code="50010">No DocBlock was found for method setVar()</error>
+      <error line="21" code="50010">No DocBlock was found for method equalsIgnoreCase()</error>
+      <error line="26" code="50010">No DocBlock was found for method startsWith()</error>
+      <error line="31" code="50010">No DocBlock was found for method endsWith()</error>
+      <error line="37" code="50010">No DocBlock was found for method indexOf()</error>
+      <error line="42" code="50010">No DocBlock was found for method lastIndexOf()</error>
+      <error line="47" code="50010">No DocBlock was found for method subString()</error>
+      <error line="52" code="50010">No DocBlock was found for method concat()</error>
+      <error line="57" code="50010">No DocBlock was found for method replace()</error>
+      <error line="62" code="50010">No DocBlock was found for method matches()</error>
+      <error line="68" code="50010">No DocBlock was found for method replaceFirst()</error>
+      <error line="73" code="50010">No DocBlock was found for method replaceAll()</error>
+      <error line="78" code="50010">No DocBlock was found for method split()</error>
+      <error line="83" code="50010">No DocBlock was found for method toLowerCase()</error>
+      <error line="88" code="50010">No DocBlock was found for method toUpperCase()</error>
+      <error line="93" code="50010">No DocBlock was found for method length()</error>
+      <error line="98" code="50010">No DocBlock was found for method realLength()</error>
+      <error line="103" code="50010">No DocBlock was found for method trim()</error>
+      <error line="108" code="50010">No DocBlock was found for method isEmpty()</error>
+      <error line="113" code="50010">No DocBlock was found for method toString()</error>
+      <error line="118" code="50010">No DocBlock was found for method toCharArray()</error>
+      <error line="123" code="50010">No DocBlock was found for method valueOf()</error>
+      <error line="128" code="50010">No DocBlock was found for method stringValue()</error>
+    </parse_markers>
+  </file>
+  <file path="index.php" hash="dfbb98e6c32c320550bd00ebe0d971dd" package="Default">
+    <include line="11" type="Require Once" package="Default">
+      <name/>
+    </include>
+    <constant namespace="global" line="3" package="Default">
+      <name>ROOT</name>
+      <full_name>\ROOT</full_name>
+      <value><![CDATA[$_SERVER[]]]></value>
+    </constant>
+    <constant namespace="global" line="4" package="Default">
+      <name>PROYECT_ROOT</name>
+      <full_name>\PROYECT_ROOT</full_name>
+      <value><![CDATA[dirname(dirname($_SERVER[])) . DIRECTORY_SEPARATOR]]></value>
+    </constant>
+    <constant namespace="global" line="5" package="Default">
+      <name>LIB_ROOT</name>
+      <full_name>\LIB_ROOT</full_name>
+      <value><![CDATA[ROOT . PROYECT_ROOT]]></value>
+    </constant>
+    <constant namespace="global" line="6" package="Default">
+      <name>JUMP</name>
+      <full_name>\JUMP</full_name>
+      <value><![CDATA[]]></value>
+    </constant>
+    <function namespace="global" line="9" package="Default">
+      <name>__autoload</name>
+      <full_name>\__autoload</full_name>
+      <argument line="9">
+        <name>$className</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
+      <error line="9" code="50009">No DocBlock was found for function \__autoload()</error>
+    </parse_markers>
+  </file>
+  <file path="Utilities/Debug.php" hash="685e1ee1a44aed3aa3d4706649e5ea72" package="Default">
+    <class final="true" abstract="true" namespace="global" line="4" package="Default">
+      <extends/>
+      <name>Data_Utilities_Debug</name>
+      <full_name>\Data_Utilities_Debug</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="8" package="Default">
+        <name>dump</name>
+        <full_name>dump</full_name>
+        <argument line="8">
+          <name>$var</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="8">
+          <name>$title</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="8">
+          <name>$show</name>
+          <default><![CDATA[true]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Utilities/Debug.php</error>
+      <error line="4" code="50000">No DocBlock was found for \Data_Utilities_Debug</error>
+      <error line="8" code="50010">No DocBlock was found for method dump()</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
